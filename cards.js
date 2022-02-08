@@ -1,0 +1,62 @@
+'use strict'
+
+ 
+ let displayCards = [
+
+ { card : "aC", url :"https://upload.wikimedia.org/wikipedia/commons/3/36/Playing_card_club_A.svg" },
+ { card : "twoC", url :"https://upload.wikimedia.org/wikipedia/commons/f/f5/Playing_card_club_2.svg" },
+ { card : "threeC", url :"https://upload.wikimedia.org/wikipedia/commons/6/6b/Playing_card_club_3.svg" },
+ { card : "fourC", url :"https://upload.wikimedia.org/wikipedia/commons/3/3d/Playing_card_club_4.svg" },
+ { card : "fiveC", url :"https://upload.wikimedia.org/wikipedia/commons/5/50/Playing_card_club_5.svg" },
+ { card : "sixC", url :"https://upload.wikimedia.org/wikipedia/commons/a/a0/Playing_card_club_6.svg" },
+ { card : "sevenC", url :"https://upload.wikimedia.org/wikipedia/commons/4/4b/Playing_card_club_7.svg" },
+ { card : "eightC", url :"https://upload.wikimedia.org/wikipedia/commons/e/eb/Playing_card_club_8.svg" },
+ { card : "nineC", url :"https://upload.wikimedia.org/wikipedia/commons/2/27/Playing_card_club_9.svg" },
+ { card : "tenC", url :"https://upload.wikimedia.org/wikipedia/commons/3/3e/Playing_card_club_10.svg" },
+ { card : "jC", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Playing_card_club_J.svg/200px-Playing_card_club_J.svg.png" },
+ { card : "qC", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_club_Q.svg/200px-Playing_card_club_Q.svg.png" },
+ { card : "kC", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Playing_card_club_K.svg/200px-Playing_card_club_K.svg.png" },
+
+ { card : "aD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Playing_card_diamond_A.svg/200px-Playing_card_diamond_A.svg.png" },
+ { card : "twoD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Playing_card_diamond_2.svg/200px-Playing_card_diamond_2.svg.png" },
+ { card : "threeD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Playing_card_diamond_3.svg/200px-Playing_card_diamond_3.svg.png" },
+ { card : "fourD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Playing_card_diamond_4.svg/200px-Playing_card_diamond_4.svg.png" },
+ { card : "fiveD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Playing_card_diamond_5.svg/200px-Playing_card_diamond_5.svg.png" },
+ { card : "sixD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/8/80/Playing_card_diamond_6.svg/200px-Playing_card_diamond_6.svg.png" },
+ { card : "sevenD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Playing_card_diamond_7.svg/200px-Playing_card_diamond_7.svg.png" },
+ { card : "eightD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Playing_card_diamond_8.svg/200px-Playing_card_diamond_8.svg.png" },
+ { card : "nineD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Playing_card_diamond_9.svg/200px-Playing_card_diamond_9.svg.png" },
+ { card : "tenD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Playing_card_diamond_10.svg/200px-Playing_card_diamond_10.svg.png" },
+ { card : "jD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Playing_card_diamond_J.svg/200px-Playing_card_diamond_J.svg.png" },
+ { card : "qD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Playing_card_diamond_Q.svg/200px-Playing_card_diamond_Q.svg.png" },
+ { card : "kD", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Playing_card_diamond_K.svg/200px-Playing_card_diamond_K.svg.png" },
+
+ { card : "aH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Playing_card_heart_A.svg/200px-Playing_card_heart_A.svg.png" },
+ { card : "twoH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Playing_card_heart_2.svg/200px-Playing_card_heart_2.svg.png" },
+ { card : "threeH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Playing_card_heart_3.svg/200px-Playing_card_heart_3.svg.png" },
+ { card : "fourH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Playing_card_heart_4.svg/200px-Playing_card_heart_4.svg.png" },
+ { card : "fiveH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Playing_card_heart_5.svg/200px-Playing_card_heart_5.svg.png" },
+ { card : "sixH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Playing_card_heart_6.svg/200px-Playing_card_heart_6.svg.png" },
+ { card : "sevenH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Playing_card_heart_7.svg/200px-Playing_card_heart_7.svg.png" },
+ { card : "eightH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Playing_card_heart_8.svg/200px-Playing_card_heart_8.svg.png" },
+ { card : "nineH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Playing_card_heart_9.svg/200px-Playing_card_heart_9.svg.png" },
+ { card : "tenH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/Playing_card_heart_10.svg/200px-Playing_card_heart_10.svg.png" },
+ { card : "jH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Playing_card_heart_J.svg/200px-Playing_card_heart_J.svg.png" },
+ { card : "qH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/Playing_card_heart_Q.svg/200px-Playing_card_heart_Q.svg.png" },
+ { card : "kH", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Playing_card_heart_K.svg/200px-Playing_card_heart_K.svg.png" },
+
+ { card : "aS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Playing_card_spade_A.svg/200px-Playing_card_spade_A.svg.png" },
+ { card : "twoS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Playing_card_spade_2.svg/200px-Playing_card_spade_2.svg.png" },
+ { card : "threeS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Playing_card_spade_3.svg/200px-Playing_card_spade_3.svg.png" },
+ { card : "fourS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Playing_card_spade_4.svg/200px-Playing_card_spade_4.svg.png" },
+ { card : "fiveS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Playing_card_spade_5.svg/200px-Playing_card_spade_5.svg.png" },
+ { card : "sixS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Playing_card_spade_6.svg/200px-Playing_card_spade_6.svg.png" },
+ { card : "sevenS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Playing_card_spade_7.svg/200px-Playing_card_spade_7.svg.png" },
+ { card : "eightS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Playing_card_spade_8.svg/200px-Playing_card_spade_8.svg.png" },
+ { card : "nineS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Playing_card_spade_9.svg/200px-Playing_card_spade_9.svg.png" },
+ { card : "tenS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Playing_card_spade_10.svg/200px-Playing_card_spade_10.svg.png" },
+ { card : "jS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/b/bd/Playing_card_spade_J.svg/200px-Playing_card_spade_J.svg.png" },
+ { card : "qS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Playing_card_spade_Q.svg/200px-Playing_card_spade_Q.svg.png" },
+ { card : "kS", url :"https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Playing_card_spade_K.svg/200px-Playing_card_spade_K.svg.png" }
+
+]
